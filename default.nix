@@ -1,6 +1,9 @@
-{ mkDerivation, aeson, base, bytestring, containers, directory
-, http-api-data, http-client, http-media, http-types, mtl, servant
-, servant-server, stdenv, text, transformers, wai, wai-logger, warp
+{ mkDerivation, aeson, async, base, bytestring, conduit
+, conduit-extra, containers, cryptonite, directory, http-api-data
+, http-client, http-conduit, http-media, http-types, mtl
+, optparse-applicative, resourcet, safe-exceptions, servant
+, servant-checked-exceptions, servant-server, stdenv, text
+, transformers, wai, wai-logger, warp
 }:
 mkDerivation {
   pname = "FilesProxy";
@@ -9,9 +12,11 @@ mkDerivation {
   isLibrary = false;
   isExecutable = true;
   executableHaskellDepends = [
-    aeson base bytestring containers directory http-api-data
-    http-client http-media http-types mtl servant servant-server text
-    transformers wai wai-logger warp
+    aeson async base bytestring conduit conduit-extra containers
+    cryptonite directory http-api-data http-client http-conduit
+    http-media http-types mtl optparse-applicative resourcet
+    safe-exceptions servant servant-checked-exceptions servant-server
+    text transformers wai wai-logger warp
   ];
   license = stdenv.lib.licenses.bsd3;
 }

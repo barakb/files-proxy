@@ -88,6 +88,12 @@ executable proxy
                      , cryptonite
                      , async
                      , safe-exceptions
+                     , optparse-applicative
+                     , resourcet
+                     , http-conduit
+                     , conduit
+                     , conduit-extra
+
 
 
   -- Directories containing source files.

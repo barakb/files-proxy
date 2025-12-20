@@ -48,7 +48,7 @@ cabal-version:       >=1.10
 --library
 --  exposed-modules:
 --  other-modules:       FilesProxy
---  build-depends:       base >=4.10 && <4.11
+--  build-depends:       base >=4.10 && <4.23
 --  -- Directories containing source files.
 --  hs-source-dirs:      src
 --  -- Base language which the package is written in.
@@ -67,7 +67,7 @@ executable proxy
   -- other-extensions:
 
   -- Other library packages from which modules are imported.
-  build-depends:       base >=4.10 && <4.11
+  build-depends:       base >=4.10 && <4.23
                      , servant
                      , servant-server
                      , servant-checked-exceptions
